@@ -1,31 +1,34 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+  const courses = [
+    {id: 1, name: 'React Native'},
+    {id: 2, name: 'React Js'},
+    {id: 3, name: 'Node Js'},
+    {id: 4, name: 'Express Js'},
+    {id: 5, name: 'MongoDB'},
+  ];
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Hello World!</Text>
-      <Text style={styles.text}>My Name is Ali</Text>
-      <Text style={styles.text}>This is My First App</Text>
-    </View>
+    <FlatList
+    data={courses}
+    keyExtractor={item => item.id}
+    renderItem={({item}) => <Text style={styles.text}>{item.name}</Text>}
+    />
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title:{
-      fontSize: 30,
-      fontWeight: 'semibold',
-      color: 'red',
-  },
   text:{
       fontSize: 15,
       fontWeight: 'bold',
       color: 'steelblue',
+      textAlign: 'center',
+      padding: 20,
+      margin: 10,
+      borderRadius: 5,
+      borderWidth: 2,
+      borderColor: 'blue',
+      backgroundColor: 'ghostwhite',
   }
 });
