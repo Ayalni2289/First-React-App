@@ -1,34 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { FlatList, StyleSheet, Text, View } from 'react-native';
+import {  StyleSheet,  } from 'react-native';
+import { NavigationContainer, } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './src/screens/homeScreen';
+import CoursesScreen from './src/screens/coursesScreen';
 
 export default function App() {
-  const courses = [
-    {id: 1, name: 'React Native'},
-    {id: 2, name: 'React Js'},
-    {id: 3, name: 'Node Js'},
-    {id: 4, name: 'Express Js'},
-    {id: 5, name: 'MongoDB'},
-  ];
+  const Stack = createNativeStackNavigator();
+
   return (
-    <FlatList
-    data={courses}
-    keyExtractor={item => item.id}
-    renderItem={({item}) => <Text style={styles.text}>{item.name}</Text>}
-    />
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Courses" component={CoursesScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
-  text:{
-      fontSize: 15,
-      fontWeight: 'bold',
-      color: 'steelblue',
-      textAlign: 'center',
-      padding: 20,
-      margin: 10,
-      borderRadius: 5,
-      borderWidth: 2,
-      borderColor: 'blue',
-      backgroundColor: 'ghostwhite',
-  }
+  
 });
