@@ -10,6 +10,10 @@ export default function HomeScreen({navigation}) {
         title="Go to Courses"
         onPress={() => navigation.navigate('Courses')}
       />
+      <Button
+        title="Go to Course Informations"
+        onPress={() => navigation.navigate('Courses Info')}
+      />
     </View>
   )
 }
