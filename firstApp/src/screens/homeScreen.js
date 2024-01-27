@@ -18,6 +18,10 @@ export default function HomeScreen({navigation}) {
         title="Go to Counter"
         onPress={() => navigation.navigate('Counter')}
       />
+      <Button
+        title="Go to Box Screen"
+        onPress={() => navigation.navigate('Boxes')}
+      />
     </View>
   )
 }
