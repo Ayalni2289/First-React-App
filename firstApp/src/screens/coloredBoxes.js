@@ -6,6 +6,7 @@ const reducer = (state, action) => {
   console.log(action);
   switch (action.type) {
     case "change_red":
+      //ternary if
       return state.red + action.payload > 255 || state.red + action.payload < 0
         ? state
         : { ...state, red: state.red + action.payload };
