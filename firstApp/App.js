@@ -8,6 +8,7 @@ import CounterScreen from './src/screens/counterScreen';
 import BoxScreen from './src/screens/boxScreen';
 import ColoredBoxes from './src/screens/coloredBoxes';
 import PasswordScreen from './src/screens/passwordScreen';
+import DesignScreen from './src/screens/designScreen';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -22,6 +23,7 @@ export default function App() {
         <Stack.Screen name="Boxes" component={BoxScreen} />
         <Stack.Screen name="ColoredBox" component={ColoredBoxes} />
         <Stack.Screen name="Password" component={PasswordScreen} />
+        <Stack.Screen name="Design" component={DesignScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

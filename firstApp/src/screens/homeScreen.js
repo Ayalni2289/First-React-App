@@ -30,6 +30,10 @@ export default function HomeScreen({navigation}) {
         title="Go to Password Screen"
         onPress={() => navigation.navigate('Password')}
       />
+       <Button
+        title="Go to Design Screen"
+        onPress={() => navigation.navigate('Design')}
+      />
     </View>
   )
 }
