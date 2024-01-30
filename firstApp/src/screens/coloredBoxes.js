@@ -1,9 +1,8 @@
 import { StyleSheet, Text, View } from "react-native";
 import React, { useReducer } from "react";
-import ChangeColor from "../../components/changeColor";
+import ChangeColor from "../../components/ChangeColor";
 
 const reducer = (state, action) => {
-  console.log(action);
   switch (action.type) {
     case "change_red":
       //ternary if
